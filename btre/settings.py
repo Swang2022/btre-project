@@ -81,8 +81,11 @@ WSGI_APPLICATION = "btre.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": 'btredb',
+        "USER": 'postgres',
+        "PASSWORD": 'Admin',
+        "HOST": 'localhost'
     }
 }
 
@@ -125,7 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "btre/static")]
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
