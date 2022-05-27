@@ -5,7 +5,7 @@ from django.contrib import messages
 def register(request):
   if request.method == "POST":
     messages.error(request,'Testing error messages')
-    return redirect('reigster')
+    return redirect('register')
   else:
     return render(request, 'accounts/register.html')
   

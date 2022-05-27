@@ -13,7 +13,7 @@
           </div>
           <div class="card-body">
             <!-- Alerts -->
-            {% includes 'partials/_alerts.html' %}
+            {% include 'partials/_alerts.html' %}
               <form action="{% url 'register' %}" method="POST">
                   {% csrf_token %}
                 <div class="form-group">
@@ -48,5 +48,4 @@
     </div>
   </div>
 </section>
-
 {% endblock %}
